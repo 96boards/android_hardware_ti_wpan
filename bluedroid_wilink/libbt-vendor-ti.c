@@ -44,11 +44,11 @@ void hw_config_cback(HC_BT_HDR *p_evt_buf);
  * *******************************************************************************/
 void hw_config_cback(HC_BT_HDR *p_evt_buf)
 {
-    ALOGI("hw_config_cback");
+    ALOGV("hw_config_cback");
 }
 
 int ti_init(const bt_vendor_callbacks_t* p_cb, unsigned char *local_bdaddr) {
-    ALOGI("vendor Init");
+    ALOGV("vendor Init");
 
     if (p_cb == NULL)
     {
@@ -61,7 +61,7 @@ int ti_init(const bt_vendor_callbacks_t* p_cb, unsigned char *local_bdaddr) {
     return 0;
 }
 void ti_cleanup(void) {
-    ALOGI("vendor cleanup");
+    ALOGV("vendor cleanup");
 
     bt_vendor_cbacks = NULL;
 }
@@ -69,7 +69,7 @@ int ti_op(bt_vendor_opcode_t opcode, void **param) {
     int fd;
     int *fd_array = (int (*)[]) param;
 
-    ALOGI("vendor op - %d", opcode);
+    ALOGV("vendor op - %d", opcode);
     switch(opcode)
     {
         case BT_VND_OP_USERIAL_OPEN:
