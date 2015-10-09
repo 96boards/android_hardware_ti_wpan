@@ -25,9 +25,8 @@
 #include <fcntl.h>
 #include <errno.h>
 #include <bt_vendor_lib.h>
-#include <bt_hci_lib.h>
 #include <bt_hci_bdroid.h>
-#include <utils.h>
+#include <hardware/bluetooth.h>
 
 bt_vendor_callbacks_t *bt_vendor_cbacks = NULL;
 unsigned int hci_tty_fd = -1;
@@ -53,7 +52,7 @@ int ti_init(const bt_vendor_callbacks_t* p_cb, unsigned char *local_bdaddr) {
     if (p_cb == NULL)
     {
         ALOGE("init failed with no user callbacks!");
-        return BT_HC_STATUS_FAIL;
+        return BT_STATUS_FAIL;
     }
 
     bt_vendor_cbacks = (bt_vendor_callbacks_t *) p_cb;
