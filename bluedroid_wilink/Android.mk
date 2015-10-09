@@ -18,7 +18,7 @@ ifeq (hikey, $(TARGET_PRODUCT))
 LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 
-LOCAL_C_INCLUDES := external/bluetooth/bluedroid/hci/include
+LOCAL_C_INCLUDES := system/bt/hci/include hardware/libhardware/include
 
 LOCAL_CFLAGS := -g -c -W -Wall -O2 -D_POSIX_SOURCE
 
