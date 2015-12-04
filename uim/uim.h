@@ -65,10 +65,10 @@
 /* the sysfs entries with device configuration set by
  * shared transport driver
  */
-#define INSTALL_SYSFS_ENTRY "/sys/devices/kim/install"
-#define DEV_NAME_SYSFS "/sys/devices/kim/dev_name"
-#define BAUD_RATE_SYSFS "/sys/devices/kim/baud_rate"
-#define FLOW_CTRL_SYSFS "/sys/devices/kim/flow_cntrl"
+#define INSTALL_SYSFS_ENTRY "/sys/devices/platform/kim/install"
+#define DEV_NAME_SYSFS "/sys/devices/platform/kim/dev_name"
+#define BAUD_RATE_SYSFS "/sys/devices/platform/kim/baud_rate"
+#define FLOW_CTRL_SYSFS "/sys/devices/platform/kim/flow_cntrl"
 
 
 #define VERBOSE
